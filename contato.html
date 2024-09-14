@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoViajar - Contato</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function enviarMensagem(event) {
+            event.preventDefault(); // Evita que o formulário seja enviado de verdade
+            alert("Email enviado!"); // Alerta de confirmação
+            document.getElementById("contato-form").reset(); // Limpa o formulário
+        }
+    </script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1>EcoViajar</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="dicas.html">Dicas Sustentáveis</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato conosco através do formulário abaixo.</p>
+            <form id="contato-form" onsubmit="enviarMensagem(event)">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" value="seuemail@dominio.com" readonly required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EcoViajar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
